@@ -35,3 +35,67 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+<meta charset="UFT-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(altura, peso) {
+
+        return peso / (altura * altura);
+    }
+
+    var nome = prompt("Infome seu nome");
+    var alturaInformada = prompt(nome + ", infome sua altura");
+    var pesoInformado = prompt(nome + ", infome seu peso");
+    var imc = calculaImc(alturaInformada, pesoInformado);
+
+    mostra(nome + ", o seu IMC é: " + imc);
+
+
+    if(imc < 18.5) {
+
+        mostra("Você está abaixo do recomendado.");
+    }
+
+
+    if(imc >= 18.5 && imc <=24.9) {
+
+            mostra("Você está com o peso ideal de acordo com a OMS.");
+        }
+
+
+    if(imc >= 25 && imc <=29.9) {
+
+            mostra("Você está levemente acima do peso.");
+        }
+
+
+    if(imc >= 30 && imc <= 34.9) {
+
+            mostra("Atenção: obesidade grau I.");
+        }
+
+
+    if(imc >= 35 && imc <= 39.9) {
+
+            mostra("Atenção: obesidade grau II (severa).");
+        }
+
+
+    if(imc > 40) {
+
+            mostra("Atenção: obesidade grau III (mórbida).");
+        }
+
+
+</script>
